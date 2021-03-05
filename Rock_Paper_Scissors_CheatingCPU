@@ -1,0 +1,64 @@
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+
+player_choice = input("I must warn you, I'm extremely good at this. Rock, Paper or Scissors? (Type 0 for Rock, 1 for Paper or 2 for Scissors.\n) ")
+
+player = int(player_choice)
+cpu = 0
+
+if player == 0: 
+  print(rock)
+  cpu += 1 
+elif player == 1:
+  print(paper)
+  cpu += 2
+elif player == 2:
+  print(scissors)
+else:
+   print("You have selected an incorrect character. Try again!")
+   cpu += 3
+
+print("Computer chose:")
+
+if cpu == 0:
+  print(rock)
+elif cpu == 1:
+  print(paper)
+elif cpu == 3:
+  print()
+else:
+  print(scissors)
+
+if player == 0 and cpu == 2 or player == 1 and cpu == 0 or player == 2 and cpu == 1:
+  print("You win!")
+elif player ==0 and cpu == 1 or player == 1 and cpu == 2 or player == 2 and cpu == 0:
+  print("You lose! 😜") 
+elif cpu == 3:
+  print()
+else:
+  print("It's a draw!")
